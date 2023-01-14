@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		C214FCA92971B3B300C33274 /* DyldDeNeuralyzer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DyldDeNeuralyzer; sourceTree = BUILT_PRODUCTS_DIR; };
 		C214FCAC2971B3B300C33274 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C214FCB32971B8F600C33274 /* DyldDeNeuralyzer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DyldDeNeuralyzer.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		C214FCAB2971B3B300C33274 /* DyldDeNeuralyzer */ = {
 			isa = PBXGroup;
 			children = (
+				C214FCB32971B8F600C33274 /* DyldDeNeuralyzer.entitlements */,
 				C214FCAC2971B3B300C33274 /* main.m */,
 			);
 			path = DyldDeNeuralyzer;
@@ -238,7 +240,11 @@
 		C214FCB12971B3B300C33274 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DyldDeNeuralyzer/DyldDeNeuralyzer.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66GENWGHQ7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,7 +252,11 @@
 		C214FCB22971B3B300C33274 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DyldDeNeuralyzer/DyldDeNeuralyzer.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66GENWGHQ7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
