@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C214FCAD2971B3B300C33274 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C214FCAC2971B3B300C33274 /* main.m */; };
+		C214FCB62976C3D500C33274 /* macholoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C214FCB52976C3D500C33274 /* macholoader.m */; };
+		C214FCB92976C5C200C33274 /* queue.m in Sources */ = {isa = PBXBuildFile; fileRef = C214FCB82976C5C200C33274 /* queue.m */; };
+		C214FCBD2976C66100C33274 /* dyldpatch.m in Sources */ = {isa = PBXBuildFile; fileRef = C214FCBC2976C66100C33274 /* dyldpatch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +29,12 @@
 		C214FCA92971B3B300C33274 /* DyldDeNeuralyzer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DyldDeNeuralyzer; sourceTree = BUILT_PRODUCTS_DIR; };
 		C214FCAC2971B3B300C33274 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C214FCB32971B8F600C33274 /* DyldDeNeuralyzer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DyldDeNeuralyzer.entitlements; sourceTree = "<group>"; };
+		C214FCB52976C3D500C33274 /* macholoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = macholoader.m; sourceTree = "<group>"; };
+		C214FCB72976C55500C33274 /* macholoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macholoader.h; sourceTree = "<group>"; };
+		C214FCB82976C5C200C33274 /* queue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = queue.m; sourceTree = "<group>"; };
+		C214FCBA2976C5DD00C33274 /* queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
+		C214FCBC2976C66100C33274 /* dyldpatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dyldpatch.m; sourceTree = "<group>"; };
+		C214FCBE2976C69E00C33274 /* dyldpatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dyldpatch.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +67,32 @@
 		C214FCAB2971B3B300C33274 /* DyldDeNeuralyzer */ = {
 			isa = PBXGroup;
 			children = (
+				C214FCBB2976C63900C33274 /* DyldPatch */,
+				C214FCB42976C3B700C33274 /* MachoLoader */,
 				C214FCB32971B8F600C33274 /* DyldDeNeuralyzer.entitlements */,
 				C214FCAC2971B3B300C33274 /* main.m */,
 			);
 			path = DyldDeNeuralyzer;
+			sourceTree = "<group>";
+		};
+		C214FCB42976C3B700C33274 /* MachoLoader */ = {
+			isa = PBXGroup;
+			children = (
+				C214FCB52976C3D500C33274 /* macholoader.m */,
+				C214FCB72976C55500C33274 /* macholoader.h */,
+				C214FCB82976C5C200C33274 /* queue.m */,
+				C214FCBA2976C5DD00C33274 /* queue.h */,
+			);
+			path = MachoLoader;
+			sourceTree = "<group>";
+		};
+		C214FCBB2976C63900C33274 /* DyldPatch */ = {
+			isa = PBXGroup;
+			children = (
+				C214FCBC2976C66100C33274 /* dyldpatch.m */,
+				C214FCBE2976C69E00C33274 /* dyldpatch.h */,
+			);
+			path = DyldPatch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,7 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C214FCB92976C5C200C33274 /* queue.m in Sources */,
 				C214FCAD2971B3B300C33274 /* main.m in Sources */,
+				C214FCB62976C3D500C33274 /* macholoader.m in Sources */,
+				C214FCBD2976C66100C33274 /* dyldpatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
